@@ -16,6 +16,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,6 +69,7 @@ public class addUser extends AppCompatActivity {
                 intent.putExtra("Address", add);
                 intent.putExtra("phone", ph);
                 intent.putExtra("aadhar", aadh);
+                intent.putExtra("photo", currentPhotoPath);
 
                 startActivity(intent);
 
@@ -83,6 +85,7 @@ public class addUser extends AppCompatActivity {
         });
     }
 
+    //check camera permission
     private void cameraPermission() {
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
@@ -107,11 +110,8 @@ public class addUser extends AppCompatActivity {
         }
     }
 
-   /* private void openCamera() {
-        Intent camera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(camera, CAMERA_REQUEST_CODE);
-    } */
 
+    //thumbnail
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -122,6 +122,7 @@ public class addUser extends AppCompatActivity {
             if(resultCode == Activity.RESULT_OK){
                 File f = new File(currentPhotoPath);
                 addPhoto.setImageURI(Uri.fromFile(f));
+                Log.d("cam", "URL: " + Uri.fromFile(f));
 
             }
         }
@@ -129,7 +130,7 @@ public class addUser extends AppCompatActivity {
 
 
 
-
+    //image storage
     private File createImageFile() throws IOException {
         // Create an image file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
@@ -146,6 +147,7 @@ public class addUser extends AppCompatActivity {
         return image;
     }
 
+    //image capture
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent

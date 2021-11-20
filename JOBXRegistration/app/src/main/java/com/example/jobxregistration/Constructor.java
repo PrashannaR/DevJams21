@@ -1,9 +1,9 @@
 package com.example.jobxregistration;
 
 public class Constructor {
-    String user, add, ph, aadh,occu, hour, day;
+    String user, add, ph, aadh,occu, hour, day, photo;
 
-    public Constructor(String user, String add, String ph, String aadh, String occu, String hour, String day) {
+    public Constructor(String user, String add, String ph, String aadh, String occu, String hour, String day, String photo) {
         this.user = user;
         this.add = add;
         this.ph = ph;
@@ -11,6 +11,7 @@ public class Constructor {
         this.occu = occu;
         this.hour = hour;
         this.day = day;
+        this.photo = photo;
     }
 
     public String getUser() {
@@ -67,5 +68,13 @@ public class Constructor {
 
     public void setDay(String day) {
         this.day = day;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

@@ -37,6 +37,7 @@ public class workDetails extends AppCompatActivity {
         String add = intent.getStringExtra("Address");
         String ph = intent.getStringExtra("phone");
         String aadh = intent.getStringExtra("aadhar");
+        String photo = intent.getStringExtra("photo");
 
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +52,7 @@ public class workDetails extends AppCompatActivity {
 
                 //upload data
                 Constructor Constructor = new Constructor(user, add, ph, aadh,
-                        occu, hour, day);
+                        occu, hour, day, photo);
                 reference.child(ph).setValue(Constructor);
 
 
