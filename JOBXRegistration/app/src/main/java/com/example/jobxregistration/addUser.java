@@ -23,10 +23,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public class addUser extends AppCompatActivity {
     public static final int CAMERA_PERMISSION_CODE = 101;
@@ -36,6 +42,10 @@ public class addUser extends AppCompatActivity {
     ImageView addPhoto;
     EditText userName, address, phone, aadahar;
     String currentPhotoPath;
+    public Uri imageUri;
+
+    FirebaseStorage storage;
+    StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,9 @@ public class addUser extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         aadahar = findViewById(R.id.aadhaar);
 
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,16 +89,53 @@ public class addUser extends AppCompatActivity {
             }
         });
 
-        //open camera
         addPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //choosePictures();
+            }
+        });
+
+        //open camera
+      /*  addPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                cameraPermission();
             }
-        });
+        });*/
     }
 
-    //check camera permission
+/*    private void choosePictures() {
+        Intent pic = new Intent();
+        pic .setType("image/*");
+        pic.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(pic, 1);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == RESULT_OK && data!=null && data.getData()!=null){
+           imageUri = data.getData();
+           addPhoto.setImageURI(imageUri);
+           uploadPicture();
+        }
+    }
+
+    private void uploadPicture() {
+        final String randomKey = UUID.randomUUID().toString();
+        StorageReference ref = storageReference.child("images/" + randomKey);
+
+        ref.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                System.out.println(imageUri);
+
+            }
+        });
+    }*/
+    /*  //check camera permission
     private void cameraPermission() {
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
@@ -137,9 +187,9 @@ public class addUser extends AppCompatActivity {
         String imageFileName = "JPEG_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(
-                imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
-                storageDir      /* directory */
+                imageFileName,  *//* prefix *//*
+                ".jpg",         *//* suffix *//*
+                storageDir      *//* directory *//*
         );
 
         // Save a file: path for use with ACTION_VIEW intents
@@ -168,7 +218,7 @@ public class addUser extends AppCompatActivity {
                 startActivityForResult(takePictureIntent,CAMERA_REQUEST_CODE );
             }
         }
-    }
+    }*/
 
 
 
