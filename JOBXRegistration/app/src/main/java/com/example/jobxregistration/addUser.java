@@ -221,24 +221,6 @@ public class addUser extends AppCompatActivity {
     }*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     private boolean checkName(){
         String nameValue = userName.getText().toString().trim();
         if(nameValue.isEmpty()){
@@ -253,7 +235,7 @@ public class addUser extends AppCompatActivity {
     private boolean checkAddress(){
         String addValue = address.getText().toString().trim();
         if(addValue.isEmpty()){
-            address.setError("Please enter the name");
+            address.setError("Please enter the address");
             return false;
         }else {
             address.setError(null);
@@ -263,18 +245,19 @@ public class addUser extends AppCompatActivity {
 
     private boolean checkPhone(){
         String phoneValue = phone.getText().toString().trim();
-        if(phoneValue.isEmpty()){
-            phone.setError("Please enter the name");
+        if(phoneValue.length() != 10 ){
+            phone.setError("Please fill the field correctly");
             return false;
         }else {
             phone.setError(null);
             return true;
         }
+
     }
     private boolean checkAadhar(){
         String aadharValue = aadahar.getText().toString().trim();
-        if(aadharValue.isEmpty()){
-            aadahar.setError("Please enter the name");
+        if(aadharValue.length() != 12){
+            aadahar.setError("Please fill the form correctly");
             return false;
         }else {
             aadahar.setError(null);
