@@ -86,6 +86,11 @@ public class addUser extends AppCompatActivity {
 
                 startActivity(intent);
 
+                userName.getText().clear();
+                address.getText().clear();
+                phone.getText().clear();
+                aadahar.getText().clear();
+
             }
         });
 

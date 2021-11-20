@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -42,6 +43,7 @@ public class workDetails extends AppCompatActivity {
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //database setup
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
@@ -54,6 +56,13 @@ public class workDetails extends AppCompatActivity {
                 Constructor Constructor = new Constructor(user, add, ph, aadh,
                         occu, hour, day, photo);
                 reference.child(ph).setValue(Constructor);
+
+                Occupation.getText().clear();
+                perHour.getText().clear();
+                perDay.getText().clear();
+
+                startActivity(new Intent(getApplicationContext(), addUser.class ));
+
 
 
 
