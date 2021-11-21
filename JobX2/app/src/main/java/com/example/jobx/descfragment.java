@@ -1,13 +1,16 @@
 package com.example.jobx;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -24,6 +27,7 @@ public class descfragment extends Fragment {
     private String mParam2;
 
     String user,  occu,  year,  hour,  day,  ph,  aadh;
+    Button btnPartTime, btnFullDay;
 
     public descfragment() {
 
@@ -57,6 +61,7 @@ public class descfragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -65,12 +70,47 @@ public class descfragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_descfragment, container, false);
 
+
         TextView nametext = view.findViewById(R.id.nametext);
         TextView occupationtext = view.findViewById(R.id.occupationText);
         TextView years = view.findViewById(R.id.years);
         TextView partTime = view.findViewById(R.id.partTime);
         TextView fullTime = view.findViewById(R.id.fullTime);
         TextView aadhar = view.findViewById(R.id.aadhar);
+
+        Button btnPartTime = (Button) view.findViewById(R.id.btnPartTime);
+        Button btnFullDay = (Button) view.findViewById(R.id.btnFullDay);
+
+
+        btnPartTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), partTimeConfirm.class);
+                intent.putExtra("user", user);
+                intent.putExtra("occupation", occu);
+                intent.putExtra("years", year);
+                intent.putExtra("partTime", hour);
+                intent.putExtra("fullTime", day);
+                intent.putExtra("aadhar", aadh);
+                startActivity(intent);
+            }
+        });
+
+        btnFullDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), partTimeConfirm.class);
+                intent.putExtra("user", user);
+                intent.putExtra("occupation", occu);
+                intent.putExtra("years", year);
+                intent.putExtra("partTime", hour);
+                intent.putExtra("fullTime", day);
+                intent.putExtra("aadhar", aadh);
+                startActivity(intent);
+            }
+        });
+
+
 
         nametext.setText(user);
         occupationtext.setText(occu);
@@ -81,6 +121,8 @@ public class descfragment extends Fragment {
 
 
         return view;
+
+
     }
 
     public void onBackPressed(){

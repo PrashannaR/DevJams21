@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobX">
         <activity
+            android:name=".fullTimeConfirm"
+            android:exported="false" />
+        <activity
+            android:name=".partTimeConfirm"
+            android:exported="false" />
+        <activity
             android:name=".electricianView"
             android:exported="false" />
         <activity

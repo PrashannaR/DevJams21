@@ -27,6 +27,8 @@ public class myAdaptarClassElectrician extends FirebaseRecyclerAdapter<model, my
         holder.partTime.setText(model.getHour());
         holder.fullTime.setText(model.getDay());
 
+
+
         holder.nametext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

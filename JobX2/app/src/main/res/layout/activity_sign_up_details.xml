@@ -20,6 +20,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/blue" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="149dp"
+        android:layout_height="147dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/addPhoto"
         android:layout_width="100dp"
@@ -109,13 +118,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="149dp"
-        android:layout_height="147dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
 
     <EditText
         android:id="@+id/password"

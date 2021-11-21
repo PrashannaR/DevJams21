@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".descfragment">
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fullTimeConfirm">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="434dp"
+        android:layout_height="535dp"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="149dp"
+        android:layout_height="147dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 
     <RelativeLayout
-        android:layout_marginTop="200dp"
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:background="#EFEFEF"
-        android:padding="15dp">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
 
         <TextView
@@ -67,37 +91,19 @@
 
         <TextView
             android:id="@+id/partTime"
-            android:layout_marginLeft="75dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/years"
+            android:layout_marginLeft="75dp"
             android:text="x" />
+
         <TextView
             android:id="@+id/perHour"
-            android:layout_marginLeft="95dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/years"
+            android:layout_marginLeft="95dp"
             android:text="/hr" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full Time: ₹"
-            android:layout_toRightOf="@+id/partTimeNonChanging"
-            android:id="@+id/fullTimeNonChanging"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="130dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="y"
-            android:layout_toRightOf="@+id/partTimeNonChanging"
-            android:id="@+id/fullTime"
-            android:layout_marginLeft="175dp"
-            android:layout_marginTop="130dp"/>
-
 
         <TextView
             android:id="@+id/aadhar"
@@ -108,52 +114,24 @@
             android:text="Aadhar Card Number" />
 
         <TextView
-            android:id="@+id/hire"
+            android:id="@+id/fullTimeNonChanging"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/aadhar"
-            android:text="Hire: "
-            android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="130dp"
+            android:layout_toRightOf="@+id/partTimeNonChanging"
+            android:text="Full Time: ₹" />
 
-        <Button
-            android:id="@+id/btnPartTime"
+        <TextView
+            android:id="@+id/fullTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/hire"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#217C7E"
-            android:text="Part Time"
-
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/btnFullDay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hire"
-            android:layout_marginLeft="240dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#217C7E"
-            android:text="Full Day"
-            android:textAllCaps="false" />
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="130dp"
+            android:layout_toRightOf="@+id/partTimeNonChanging"
+            android:text="y" />
 
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-270dp"
-        android:src="@drawable/blue" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/logo" />
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
