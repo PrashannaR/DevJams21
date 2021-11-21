@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".OccupationTypes">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="434dp"
+        android:layout_height="535dp"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="149dp"
+        android:layout_height="147dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Occupation"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/electrician"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/electrician"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+    <TextView
+        android:id="@+id/txtelectrician"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:text="Electrician"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/electrician" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/plumber"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/plumber"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/electrician"
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+    <TextView
+        android:id="@+id/txtplumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Plumber"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/txtcarpenter"
+        app:layout_constraintStart_toEndOf="@+id/txtelectrician"
+        app:layout_constraintTop_toBottomOf="@+id/plumber" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/carpenter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/carpenter"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/plumber"
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+    <TextView
+        android:id="@+id/txtcarpenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="49dp"
+        android:text="Carpenter"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carpenter" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cleaner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cleaner"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtelectrician" />
+
+    <TextView
+        android:id="@+id/txtcleaner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Cleaner"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cleaner" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gardener"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/gardener"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/cleaner"
+        app:layout_constraintTop_toBottomOf="@+id/txtplumber" />
+
+    <TextView
+        android:id="@+id/txtgardener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gardener"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/txtcarpenter"
+        app:layout_constraintStart_toEndOf="@+id/txtelectrician"
+        app:layout_constraintTop_toBottomOf="@+id/gardener" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/painter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/painter"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/gardener"
+        app:layout_constraintTop_toBottomOf="@+id/txtcarpenter" />
+
+    <TextView
+        android:id="@+id/txtPainter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="55dp"
+        android:text="Painter"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painter" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/labour"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cleaner"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcleaner" />
+    <TextView
+        android:id="@+id/txtLaour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Labour"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labour" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/movers"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/mover"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/labour"
+        app:layout_constraintTop_toBottomOf="@+id/txtgardener" />
+
+    <TextView
+        android:id="@+id/txtMovers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:text="Movers"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/txtblacksmith"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/txtLaour"
+        app:layout_constraintTop_toBottomOf="@+id/movers" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/blacksmith"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cleaner"
+        app:civ_border_color="#FFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toEndOf="@+id/movers"
+        app:layout_constraintTop_toBottomOf="@+id/txtPainter" />
+
+    <TextView
+        android:id="@+id/txtblacksmith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:text="Black Smith"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blacksmith" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
