@@ -38,6 +38,7 @@ public class SignUpPhone extends AppCompatActivity {
                     return;
                 }
 
+                //change here for final build
                 PhoneAuthProvider.getInstance().verifyPhoneNumber(
                         "+977" + phone.getText().toString(),
                         60,

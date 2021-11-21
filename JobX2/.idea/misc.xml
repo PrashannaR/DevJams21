@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Prash/AndroidStudioProjects/GDSC21/JobX2/app/src/main/res/layout/activity_sign_up_details.xml" value="0.2" />
         <entry key="..\:/Users/Prash/AndroidStudioProjects/GDSC21/JobX2/app/src/main/res/layout/activity_sign_up_otp.xml" value="0.264" />
         <entry key="..\:/Users/Prash/AndroidStudioProjects/GDSC21/JobX2/app/src/main/res/layout/activity_sign_up_phone.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/Prash/AndroidStudioProjects/JobX2/app/src/main/res/layout/activity_login_otp.xml" value="0.25729166666666664" />

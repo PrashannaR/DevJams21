@@ -46,7 +46,7 @@ public class workDetails extends AppCompatActivity {
 
                 //database setup
                 rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
+                reference = rootNode.getReference("employees");
 
                 String occu = Occupation.getText().toString();
                 String hour = perHour.getText().toString();
