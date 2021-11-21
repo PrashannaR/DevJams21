@@ -44,10 +44,10 @@ public class LoginPhone extends AppCompatActivity {
                 String pw = password.getText().toString();
 
                 if(phoneNo.isEmpty()){
-                    phone.setError("Please fill out the phone number");
+                    phone.setError("Please fill in the phone number");
                 }
                 else if(pw.isEmpty()){
-                    password.setError("Please fill out the password");
+                    password.setError("Please fill in the password");
                 } else {
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override

@@ -53,7 +53,7 @@ public class addUser extends AppCompatActivity {
         setContentView(R.layout.activity_add_user);
 
         btnNext = findViewById(R.id.btnNext);
-        addPhoto = findViewById(R.id.addPhoto);
+       // addPhoto = findViewById(R.id.addPhoto);
         userName = findViewById(R.id.name);
         address = findViewById(R.id.address);
         phone = findViewById(R.id.phone);
@@ -94,12 +94,7 @@ public class addUser extends AppCompatActivity {
             }
         });
 
-        addPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //choosePictures();
-            }
-        });
+
 
         //open camera
       /*  addPhoto.setOnClickListener(new View.OnClickListener() {

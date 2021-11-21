@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class workDetails extends AppCompatActivity {
 
-    EditText Occupation, perHour, perDay;
+    EditText Occupation, perHour, perDay, yearsOfExp;
     Button btnAddUser;
 
     FirebaseDatabase rootNode;
@@ -31,6 +31,7 @@ public class workDetails extends AppCompatActivity {
         perHour = findViewById(R.id.perHour);
         perDay = findViewById(R.id.perDay);
         btnAddUser = findViewById(R.id.btnAddUser);
+        yearsOfExp = findViewById(R.id.yearsOfExp);
 
         //get values from the details page
         Intent intent = getIntent();
@@ -38,7 +39,7 @@ public class workDetails extends AppCompatActivity {
         String add = intent.getStringExtra("Address");
         String ph = intent.getStringExtra("phone");
         String aadh = intent.getStringExtra("aadhar");
-        String photo = intent.getStringExtra("photo");
+       // String photo = intent.getStringExtra("photo");
 
         btnAddUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +52,11 @@ public class workDetails extends AppCompatActivity {
                 String occu = Occupation.getText().toString();
                 String hour = perHour.getText().toString();
                 String day = perDay.getText().toString();
+                String year = yearsOfExp.getText().toString();
 
                 //upload data
                 Constructor Constructor = new Constructor(user, add, ph, aadh,
-                        occu, hour, day, photo);
+                        occu, hour, day, year);
                 reference.child(ph).setValue(Constructor);
 
                 Occupation.getText().clear();

@@ -75,18 +75,18 @@
 
     <Button
         android:id="@+id/btnAddUser"
-        android:textAllCaps="false"
         style="?borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
+        android:text="Add User"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:text="Add User"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/perDay" />
+        app:layout_constraintTop_toBottomOf="@+id/yearsOfExp" />
 
     <TextView
         android:id="@+id/work"
@@ -99,5 +99,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/yearsOfExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Years of experience"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/perDay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
