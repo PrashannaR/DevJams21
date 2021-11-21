@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -25,6 +26,14 @@ public class myAdaptarClassElectrician extends FirebaseRecyclerAdapter<model, my
         holder.years.setText(model.getYear());
         holder.partTime.setText(model.getHour());
         holder.fullTime.setText(model.getDay());
+
+        holder.nametext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
+            }
+        });
     }
 
     @NonNull

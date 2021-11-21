@@ -8,15 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link descfragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class descfragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -24,19 +19,24 @@ public class descfragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    String user,  occu,  year,  hour,  day,  ph,  aadh;
+
     public descfragment() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment descfragment.
-     */
-    // TODO: Rename and change types and number of parameters
+    public descfragment(String user, String occu, String year, String hour, String day, String ph, String aadh) {
+        this.user = user;
+        this.occu = occu;
+        this.year = year;
+        this.hour = hour;
+        this.day = day;
+        this.ph = ph;
+        this.aadh = aadh;
+
+    }
+
+
     public static descfragment newInstance(String param1, String param2) {
         descfragment fragment = new descfragment();
         Bundle args = new Bundle();
