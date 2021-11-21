@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".descfragment">
 
+
     <RelativeLayout
+        android:layout_marginTop="200dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
+        android:background="#EFEFEF"
         android:padding="15dp">
 
 
@@ -94,14 +98,7 @@
             android:layout_marginLeft="175dp"
             android:layout_marginTop="130dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/hr"
-            android:layout_toRightOf="@+id/partTime"
-            android:id="@+id/fullTimeperHour"
-            android:layout_marginLeft="190dp"
-            android:layout_marginTop="130dp"/>
+
 
         <TextView
             android:id="@+id/aadhar"
@@ -111,9 +108,52 @@
             android:layout_below="@+id/partTimeNonChanging"
             android:text="Aadhar Card Number" />
 
+        <TextView
+            android:id="@+id/hire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aadhar"
+            android:text="Hire: "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/btnPartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hire"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#217C7E"
+            android:text="Part Time"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnFullDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hire"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#217C7E"
+            android:text="Full Day"
+            android:textAllCaps="false" />
 
 
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-270dp"
+        android:src="@drawable/blue" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo" />
 
 </FrameLayout>

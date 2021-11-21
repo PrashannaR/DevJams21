@@ -2,11 +2,15 @@ package com.example.jobx;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class descfragment extends Fragment {
@@ -59,6 +63,28 @@ public class descfragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_descfragment, container, false);
+        View view =  inflater.inflate(R.layout.fragment_descfragment, container, false);
+
+        TextView nametext = view.findViewById(R.id.nametext);
+        TextView occupationtext = view.findViewById(R.id.occupationText);
+        TextView years = view.findViewById(R.id.years);
+        TextView partTime = view.findViewById(R.id.partTime);
+        TextView fullTime = view.findViewById(R.id.fullTime);
+        TextView aadhar = view.findViewById(R.id.aadhar);
+
+        nametext.setText(user);
+        occupationtext.setText(occu);
+        years.setText(year);
+        partTime.setText(hour);
+        fullTime.setText(day);
+        aadhar.setText(aadh);
+
+
+        return view;
+    }
+
+    public void onBackPressed(){
+        AppCompatActivity activity = (AppCompatActivity)getContext();
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new recfragmentElectrician()).addToBackStack(null).commit();
     }
 }

@@ -65,13 +65,14 @@ public class OccupationTypes extends AppCompatActivity {
         plumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
             }
         });
 
         txtplumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -80,6 +81,7 @@ public class OccupationTypes extends AppCompatActivity {
         carpenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -87,6 +89,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtcarpenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -95,6 +98,7 @@ public class OccupationTypes extends AppCompatActivity {
         cleaner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -102,6 +106,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtcleaner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -110,6 +115,7 @@ public class OccupationTypes extends AppCompatActivity {
         gardener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -117,6 +123,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtgardener.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -126,6 +133,7 @@ public class OccupationTypes extends AppCompatActivity {
         painter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -133,6 +141,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtPainter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -141,6 +150,7 @@ public class OccupationTypes extends AppCompatActivity {
         labour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -148,6 +158,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtLaour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -156,6 +167,7 @@ public class OccupationTypes extends AppCompatActivity {
         movers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -163,6 +175,7 @@ public class OccupationTypes extends AppCompatActivity {
         txtMovers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -172,6 +185,7 @@ public class OccupationTypes extends AppCompatActivity {
         blacksmith.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });
@@ -179,6 +193,7 @@ public class OccupationTypes extends AppCompatActivity {
         blacksmith.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
 
             }
         });

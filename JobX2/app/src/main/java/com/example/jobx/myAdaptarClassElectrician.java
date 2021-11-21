@@ -34,6 +34,40 @@ public class myAdaptarClassElectrician extends FirebaseRecyclerAdapter<model, my
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
             }
         });
+
+        holder.occupationtext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
+            }
+        });
+
+        holder.years.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
+            }
+        });
+
+        holder.partTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
+            }
+        });
+
+        holder.fullTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity)view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.wrapper, new descfragment(model.getUser(), model.getOccu(), model.getYear(), model.getHour(), model.getDay(), model.getPh(), model.getAadh())).addToBackStack(null).commit();
+            }
+        });
+
+
     }
 
     @NonNull

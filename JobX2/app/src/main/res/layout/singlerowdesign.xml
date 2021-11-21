@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     app:cardBackgroundColor="#EFEFEF"
@@ -97,14 +98,6 @@
             android:layout_marginLeft="175dp"
             android:layout_marginTop="130dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/hr"
-            android:layout_toRightOf="@+id/partTime"
-            android:id="@+id/fullTimeperHour"
-            android:layout_marginLeft="190dp"
-            android:layout_marginTop="130dp"/>
 
 
 
