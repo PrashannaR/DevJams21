@@ -2,6 +2,7 @@ package com.example.jobx;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -47,13 +48,15 @@ public class OccupationTypes extends AppCompatActivity {
         electrician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
             }
         });
 
         txtelectrician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), electricianView.class));
+
 
             }
         });
