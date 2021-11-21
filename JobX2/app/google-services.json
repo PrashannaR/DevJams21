@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "869671638221",
+    "firebase_url": "https://jobx-e4dcb-default-rtdb.firebaseio.com",
+    "project_id": "jobx-e4dcb",
+    "storage_bucket": "jobx-e4dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869671638221:android:7696c7247df5f7bb8b4584",
+        "android_client_info": {
+          "package_name": "com.example.jobx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869671638221-l8i0kb8d79p40tuq8h7nmh4c4qul500h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Lu9Irb4J6TT6KjTBGoPai0l5HXg8xO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869671638221-l8i0kb8d79p40tuq8h7nmh4c4qul500h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869671638221:android:4f0ab00c70da0bf88b4584",
+        "android_client_info": {
+          "package_name": "com.example.jobxregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869671638221-l8i0kb8d79p40tuq8h7nmh4c4qul500h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7Lu9Irb4J6TT6KjTBGoPai0l5HXg8xO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869671638221-l8i0kb8d79p40tuq8h7nmh4c4qul500h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

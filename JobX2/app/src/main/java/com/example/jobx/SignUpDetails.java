@@ -42,11 +42,12 @@ public class SignUpDetails extends AppCompatActivity {
                 String add = address.getText().toString();
                 String ph = phone.getText().toString();
                 String pass = password.getText().toString();
-                
+
                 Constructor constructor = new Constructor(user, add, ph, pass);
-                reference.setValue(constructor);
+                reference.child(ph).setValue(constructor);
 
                 startActivity(new Intent(getApplicationContext(), OccupationTypes.class));
+                finish();
             }
         });
     }
