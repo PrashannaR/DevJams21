@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".VerifyEmployee">
-
-
+    tools:context=".EmployeeVerification">
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="434dp"
@@ -28,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -46,6 +45,7 @@
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/aadhar"
             android:text="number is" />
+
 
 
         <TextView
@@ -142,86 +142,4 @@
 
 
     </RelativeLayout>
-
-    <EditText
-
-        android:id="@+id/input1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/input2"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <EditText
-        android:id="@+id/input2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/input3"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <EditText
-        android:id="@+id/input3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/input4"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <EditText
-        android:id="@+id/input4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/input5"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <EditText
-        android:id="@+id/input5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/input6"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <EditText
-        android:id="@+id/input6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
-    <Button
-        android:id="@+id/btnVerify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:text="Verify"
-        android:textAllCaps="false"
-        android:backgroundTint="#217C7E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,6 +57,7 @@ public class ContactEmployee extends AppCompatActivity {
         fullTime.setText(nFullTime);
         aadhar.setText(nAadhar);
         number.setText(nNumber);
+
       //  receiverNumber.setText(nNumber);
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +69,17 @@ public class ContactEmployee extends AppCompatActivity {
                 }else {
                     ActivityCompat.requestPermissions(ContactEmployee.this, new String[]{Manifest.permission.SEND_SMS}, 0);
                 }
+               /* Intent intent = new Intent(getApplicationContext(), EmployeeVerification.class);
+                intent.putExtra("user", nametext.getText().toString());
+                intent.putExtra("occupation", occupationText.getText().toString());
+                intent.putExtra("years", years.getText().toString());
+                intent.putExtra("partTime", partTime.getText().toString());
+                intent.putExtra("fullTime", fullTime.getText().toString());
+                intent.putExtra("aadhar", aadhar.getText().toString());
+                intent.putExtra("number", number.getText().toString());
+                startActivity(intent);*/
             }
+
         });
 
 
@@ -84,6 +95,16 @@ public class ContactEmployee extends AppCompatActivity {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNumber, null, Message, null, null);
             Toast.makeText(this, "Message sent", Toast.LENGTH_SHORT).show();
+
+          /*  Intent intent = new Intent(getApplicationContext(), VerifyEmployee.class);
+            intent.putExtra("user", nametext.getText().toString());
+            intent.putExtra("occupation", occupationText.getText().toString());
+            intent.putExtra("years", years.getText().toString());
+            intent.putExtra("partTime", partTime.getText().toString());
+            intent.putExtra("fullTime", fullTime.getText().toString());
+            intent.putExtra("aadhar", aadhar.getText().toString());
+            intent.putExtra("number", number.getText().toString());
+            startActivity(intent);*/
 
         }else {
             Toast.makeText(this, "Please fill in the details correctly", Toast.LENGTH_SHORT).show();
