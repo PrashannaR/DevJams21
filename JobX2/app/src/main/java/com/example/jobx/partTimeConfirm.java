@@ -15,7 +15,7 @@ public class partTimeConfirm extends AppCompatActivity {
     TextView nametext, occupationText, years, partTime, fullTime, aadhar, totalTime;
     EditText hours;
 
-    Button btnConfirm;
+    Button btnCalculate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class partTimeConfirm extends AppCompatActivity {
         aadhar = findViewById(R.id.aadhar);
         hours = findViewById(R.id.hours);
         totalTime = findViewById(R.id.totalTime);
-        btnConfirm = findViewById(R.id.btnConfirm);
+        btnCalculate = findViewById(R.id.btnCalculate);
 
 
         //get values
@@ -49,14 +49,8 @@ public class partTimeConfirm extends AppCompatActivity {
         fullTime.setText(nFullTime);
         aadhar.setText(nAadhar);
 
-     /*   if (!hours.getText().toString().isEmpty()){
-            int intHours = Integer.parseInt(hours.getText().toString());
-           int  intPayHour = Integer.parseInt(nPartTime);
-           int mul = intHours * intPayHour;
-            totalTime.setText("The total is: " + String.valueOf(mul));
-        }*/
 
-        btnConfirm.setOnClickListener(new View.OnClickListener() {
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int intHours = Integer.parseInt(hours.getText().toString());

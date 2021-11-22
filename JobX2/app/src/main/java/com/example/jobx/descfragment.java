@@ -99,7 +99,7 @@ public class descfragment extends Fragment {
         btnFullDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), partTimeConfirm.class);
+                Intent intent = new Intent(getActivity(), fullTimeConfirm.class);
                 intent.putExtra("user", user);
                 intent.putExtra("occupation", occu);
                 intent.putExtra("years", year);
