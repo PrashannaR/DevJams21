@@ -77,6 +77,7 @@ public class descfragment extends Fragment {
         TextView partTime = view.findViewById(R.id.partTime);
         TextView fullTime = view.findViewById(R.id.fullTime);
         TextView aadhar = view.findViewById(R.id.aadhar);
+        TextView number = view.findViewById(R.id.number);
 
         Button btnPartTime = (Button) view.findViewById(R.id.btnPartTime);
         Button btnFullDay = (Button) view.findViewById(R.id.btnFullDay);
@@ -92,6 +93,7 @@ public class descfragment extends Fragment {
                 intent.putExtra("partTime", hour);
                 intent.putExtra("fullTime", day);
                 intent.putExtra("aadhar", aadh);
+                intent.putExtra("number", ph);
                 startActivity(intent);
             }
         });
@@ -106,6 +108,7 @@ public class descfragment extends Fragment {
                 intent.putExtra("partTime", hour);
                 intent.putExtra("fullTime", day);
                 intent.putExtra("aadhar", aadh);
+                intent.putExtra("number", ph);
                 startActivity(intent);
             }
         });
@@ -118,6 +121,7 @@ public class descfragment extends Fragment {
         partTime.setText(hour);
         fullTime.setText(day);
         aadhar.setText(aadh);
+        number.setText(ph);
 
 
         return view;

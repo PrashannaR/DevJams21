@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 public class partTimeConfirm extends AppCompatActivity {
 
-    TextView nametext, occupationText, years, partTime, fullTime, aadhar, totalTime;
+    TextView nametext, occupationText, years, partTime, fullTime, aadhar, totalTime,number;
     EditText hours;
 
-    Button btnCalculate;
+    Button btnCalculate, btnContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,11 @@ public class partTimeConfirm extends AppCompatActivity {
         partTime = findViewById(R.id.partTime);
         fullTime = findViewById(R.id.fullTime);
         aadhar = findViewById(R.id.aadhar);
+        number = findViewById(R.id.number);
         hours = findViewById(R.id.hours);
         totalTime = findViewById(R.id.totalTime);
         btnCalculate = findViewById(R.id.btnCalculate);
+        btnContact = findViewById(R.id.btnContact);
 
 
         //get values
@@ -41,6 +43,7 @@ public class partTimeConfirm extends AppCompatActivity {
         String nPartTime = intent.getStringExtra("partTime");
         String nFullTime = intent.getStringExtra("fullTime");
         String nAadhar = intent.getStringExtra("aadhar");
+        String nNumber = intent.getStringExtra("number");
 
         nametext.setText(user);
         occupationText.setText(occupation);
@@ -48,6 +51,8 @@ public class partTimeConfirm extends AppCompatActivity {
         partTime.setText(nPartTime);
         fullTime.setText(nFullTime);
         aadhar.setText(nAadhar);
+        number.setText(nNumber);
+
 
 
         btnCalculate.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +62,23 @@ public class partTimeConfirm extends AppCompatActivity {
                 int  intPayHour = Integer.parseInt(nPartTime);
                 int mul = intHours * intPayHour;
                 totalTime.setText("The total is: " + String.valueOf(mul));
+
+            }
+        });
+
+        btnContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent value = new Intent(getApplicationContext(), ContactEmployee.class);
+                value.putExtra("user", nametext.getText().toString());
+                value.putExtra("occupation", occupationText.getText().toString());
+                value.putExtra("years", years.getText().toString());
+                value.putExtra("partTime", partTime.getText().toString());
+                value.putExtra("fullTime", fullTime.getText().toString());
+                value.putExtra("aadhar", aadhar.getText().toString());
+                value.putExtra("number", number.getText().toString());
+                startActivity(value);
+
 
             }
         });
