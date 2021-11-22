@@ -115,6 +115,9 @@ public class descfragment extends Fragment {
 
 
 
+
+
+
         nametext.setText(user);
         occupationtext.setText(occu);
         years.setText(year);

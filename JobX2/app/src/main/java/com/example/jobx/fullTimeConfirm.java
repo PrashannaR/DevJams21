@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class fullTimeConfirm extends AppCompatActivity {
-    TextView nametext, occupationText, years, partTime, fullTime, aadhar;
+    TextView nametext, occupationText, years, partTime, fullTime, aadhar,number;
+    Button btnContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,8 @@ public class fullTimeConfirm extends AppCompatActivity {
         partTime = findViewById(R.id.partTime);
         fullTime = findViewById(R.id.fullTime);
         aadhar = findViewById(R.id.aadhar);
+        number = findViewById(R.id.number);
+        btnContact = findViewById(R.id.btnContact);
 
         //get values
         Intent intent = getIntent();
@@ -29,6 +34,7 @@ public class fullTimeConfirm extends AppCompatActivity {
         String nPartTime = intent.getStringExtra("partTime");
         String nFullTime = intent.getStringExtra("fullTime");
         String nAadhar = intent.getStringExtra("aadhar");
+        String nNumber = intent.getStringExtra("number");
 
         nametext.setText(user);
         occupationText.setText(occupation);
@@ -36,5 +42,23 @@ public class fullTimeConfirm extends AppCompatActivity {
         partTime.setText(nPartTime);
         fullTime.setText(nFullTime);
         aadhar.setText(nAadhar);
+        number.setText(nNumber);
+
+        btnContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent value = new Intent(getApplicationContext(), ContactEmployee.class);
+                value.putExtra("user", nametext.getText().toString());
+                value.putExtra("occupation", occupationText.getText().toString());
+                value.putExtra("years", years.getText().toString());
+                value.putExtra("partTime", partTime.getText().toString());
+                value.putExtra("fullTime", fullTime.getText().toString());
+                value.putExtra("aadhar", aadhar.getText().toString());
+               value.putExtra("number", number.getText().toString());
+                startActivity(value);
+
+
+            }
+        });
     }
 }
