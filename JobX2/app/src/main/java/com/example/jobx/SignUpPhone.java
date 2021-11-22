@@ -40,7 +40,7 @@ public class SignUpPhone extends AppCompatActivity {
 
                 //change here for final build
                 PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                        "+977" + phone.getText().toString(),
+                        "+91" + phone.getText().toString(),
                         60,
                         TimeUnit.SECONDS,
                         SignUpPhone.this,
